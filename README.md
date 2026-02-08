@@ -77,7 +77,7 @@ go run cmd/worker/main.go
 ---
 
 **4. Enviar um Arquivo de Teste**
-Simule o envio de uma remessa bancária:
+>Simule o envio de uma remessa bancária:
 
 ```Bash
 # Windows (PowerShell)
