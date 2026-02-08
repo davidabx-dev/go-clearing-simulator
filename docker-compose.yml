@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  localstack:
+    image: localstack/localstack:3.2.0
+    container_name: clearing_aws_sim
+    ports:
+      - "4566:4566"            # Gateway para todos os serviços AWS
+      - "4510-4559:4510-4559"  # Faixa de portas externas
+    environment:
+      - SERVICES=sqs,sns,s3    # Habilita apenas o que a vaga pede
+      - DEBUG=1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - "./tmp/localstack:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
