@@ -93,7 +93,7 @@ curl -F "file=@remessa_teste.txt" http://localhost:8080/upload
 
 O sistema é protegido contra falhas de rede que enviam o mesmo arquivo duas vezes.
 
-1. Envie o arquivo remessa_teste.txt.
+1. Envie o arquivo `remessa_teste.txt`.
 
 2.  Envie **novamente** o mesmo arquivo logo em seguida.
 
